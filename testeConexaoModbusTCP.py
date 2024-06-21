@@ -3,8 +3,8 @@ import struct
 import pymodbus
 
 # Parâmetros de conexão
-host = "10.10.82.11"
-port = 502
+ip = "10.10.82.11"
+porta = 502
 slave_id = 1
 starting_address = 0
 quantity = 10
@@ -36,7 +36,7 @@ print(pdu_request)
 # Criação do socket TCP
 try:
    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-   sock.connect((host, port))
+   sock.connect((ip, porta))
 
    sock.sendall(pdu_request)
 
